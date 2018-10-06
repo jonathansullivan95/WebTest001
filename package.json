@@ -1,0 +1,19 @@
+{
+    "name": "daddy-sulls-package",
+    "version": "1.0.0",
+    "description": "descriptions are for suckers",
+    "scripts": {
+        "start": "node buildScripts/srcServer.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jonathansullivan95/WebTest001.git"
+      },
+    "devDependencies": {
+        "express": "4.14.0",
+        "http":"0.0.0",
+        "localtunnel": "1.8.1",
+        "nsp": "3.2.1",
+        "open": "0.0.5"
+    }
+}
