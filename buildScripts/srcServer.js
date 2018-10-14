@@ -1,4 +1,4 @@
-console.log(this + 'Server-side code running');
+console.log('Server-side code running');
 
 var express = require("express");
 var path = require("path");
