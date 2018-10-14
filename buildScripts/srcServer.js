@@ -1,16 +1,18 @@
+console.log(this + 'Server-side code running');
+
 var express = require("express");
 var path = require("path");
 var open = require('open');
 // var http = require('http');
 
-var port = 3000;
+var port = 8080;
 var app = express();
 
-app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname, '../src/index.html'));
-});
+//serve files from public dir - in this case, my src folder
+app.use(express.static('src'));
 
-app.listen(port, function (err){
+//start server listening on port var
+app.listen(port, (err)=>{
     if (err) {
         console.log(err);
     }
@@ -19,7 +21,11 @@ app.listen(port, function (err){
     }
 });
 
+app.get('/', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../src/index.html'));
+});
 
-// http.createServer(function (req, res) {
+
+// http.createServer( (req, res)=>{
 //     res.sendFile(path.join(__dirname, '../src/index.html'));
 // }).listen(8080);
